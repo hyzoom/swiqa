@@ -1,0 +1,151 @@
+<odoo>
+    <data>
+
+        <!--Vendors-->
+        <record id="vendors_form" model="ir.ui.view">
+            <field name="name">Vendors</field>
+            <field name="model">vendors</field>
+            <field name="arch" type="xml">
+                <form string="Vendors">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="id_num"/>
+                                <field name="phone_num"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="vendors_tree" model="ir.ui.view">
+            <field name="name">vendors.tree</field>
+            <field name="model">vendors</field>
+            <field name="arch" type="xml">
+                <tree string="Vendors">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="phone_num"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="vendors_action">
+            <field name="name">Vendors</field>
+            <field name="res_model">vendors</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Vendors" id="vendors" parent="swiqa.menu_conf"
+                  action="vendors_action"/>
+
+        <!--Customers-->
+        <record id="customers_form" model="ir.ui.view">
+            <field name="name">Customers</field>
+            <field name="model">customers</field>
+            <field name="arch" type="xml">
+                <form string="Customers">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="address"/>
+                                <field name="phone_num"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customers_tree" model="ir.ui.view">
+            <field name="name">customers.tree</field>
+            <field name="model">customers</field>
+            <field name="arch" type="xml">
+                <tree string="Customers">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone_num"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="customers_action">
+            <field name="name">Customers</field>
+            <field name="res_model">customers</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Customers" id="customers" parent="swiqa.menu_conf"
+                  action="customers_action"/>
+
+        <!--Products-->
+        <record id="product_form" model="ir.ui.view">
+            <field name="name">Products</field>
+            <field name="model">products</field>
+            <field name="arch" type="xml">
+                <form string="Products">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="products_tree" model="ir.ui.view">
+            <field name="name">products.tree</field>
+            <field name="model">products</field>
+            <field name="arch" type="xml">
+                <tree string="Products">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="products_action">
+            <field name="name">Products</field>
+            <field name="res_model">products</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Products" id="products" parent="swiqa.menu_conf"
+                  action="products_action"/>
+
+    </data>
+</odoo>

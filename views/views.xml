@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <!--
+        <record model="ir.ui.view" id="swiqa.list">
+          <field name="name">swiqa list</field>
+          <field name="model">swiqa.swiqa</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="value"/>
+              <field name="value2"/>
+            </tree>
+          </field>
+        </record>
+        -->
+
+        <!-- actions opening views on models -->
+        <!--
+        <record model="ir.actions.act_window" id="swiqa.action_window">
+          <field name="name">swiqa window</field>
+          <field name="res_model">swiqa.swiqa</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        -->
+
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="swiqa.action_server">
+          <field name="name">swiqa server</field>
+          <field name="model_id" ref="model_swiqa_swiqa"/>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
+
+        <!-- Top menu item -->
+        <menuitem name="Swiqa" id="menu_root"/>
+        <!-- menu categories -->
+        <menuitem name="Process" id="menu_process" parent="swiqa.menu_root" sequence="1"/>
+        <menuitem name="Configuration" id="menu_conf" parent="swiqa.menu_root" sequence="2"/>
+        <!-- actions -->
+        <!--<menuitem name="Daily Process" id="menu_daily_process" parent="menu_process"-->
+        <!--action="swiqa.action_window"/>-->
+
+    </data>
+</odoo>
