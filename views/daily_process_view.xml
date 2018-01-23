@@ -1,48 +1,48 @@
 <odoo>
     <data>
 
-        <record id="daily_transport_inv_form" model="ir.ui.view">
-            <field name="name">Daily Transport</field>
-            <field name="model">daily.transport</field>
-            <field name="arch" type="xml">
-                <form string="Daily Transport">
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="date"/>
-                            </group>
-                            <group>
-                                <field name="vendor_id"/>
-                                <!--<field name="daily_trans_product_ids" widget="many2many_tags"/>-->
-                            </group>
-                        </group>
-                        <group>
-                            <field name="selling_line">
-                                <tree string="Selling lines" editable="bottom">
-                                    <field name="sell_customer_id"/>
-                                    <field name="sell_quantity" sum="sum_sell_quants"/>
-                                    <field name="sell_container"/>
-                                    <field name="sell_product_id"/>
-                                    <field name="sell_weight" sum="sum_sell_weight"/>
-                                    <field name="sell_unit_price"/>
-                                    <field name="sell_line_total" sum="sum_sell_total"/>
-                                </tree>
-                            </field>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+        <!--<record id="daily_transport_inv_form" model="ir.ui.view">-->
+            <!--<field name="name">Daily Transport</field>-->
+            <!--<field name="model">daily.transport</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Daily Transport">-->
+                    <!--<sheet>-->
+                        <!--<group>-->
+                            <!--<group>-->
+                                <!--<field name="date"/>-->
+                            <!--</group>-->
+                            <!--<group>-->
+                                <!--<field name="vendor_id"/>-->
+                                <!--&lt;!&ndash;<field name="daily_trans_product_ids" widget="many2many_tags"/>&ndash;&gt;-->
+                            <!--</group>-->
+                        <!--</group>-->
+                        <!--<group>-->
+                            <!--<field name="selling_line">-->
+                                <!--<tree string="Selling lines" editable="bottom">-->
+                                    <!--<field name="sell_customer_id"/>-->
+                                    <!--<field name="sell_quantity" sum="sum_sell_quants"/>-->
+                                    <!--<field name="sell_container"/>-->
+                                    <!--<field name="sell_product_id"/>-->
+                                    <!--<field name="sell_weight" sum="sum_sell_weight"/>-->
+                                    <!--<field name="sell_unit_price"/>-->
+                                    <!--<field name="sell_line_total" sum="sum_sell_total"/>-->
+                                <!--</tree>-->
+                            <!--</field>-->
+                        <!--</group>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
 
-        <record model="ir.actions.act_window" id="daily_invoic_action">
-            <field name="name">Daily Transport</field>
-            <field name="res_model">daily.transport</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">form</field>
-            <field name="view_ids" eval="[(5, 0, 0),
-                (0, 0, {'view_mode': 'tree'}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('daily_transport_inv_form')})]"/>
-        </record>
+        <!--<record model="ir.actions.act_window" id="daily_invoic_action">-->
+            <!--<field name="name">Daily Transport</field>-->
+            <!--<field name="res_model">daily.transport</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">form</field>-->
+            <!--<field name="view_ids" eval="[(5, 0, 0),-->
+                <!--(0, 0, {'view_mode': 'tree'}),-->
+                <!--(0, 0, {'view_mode': 'form', 'view_id': ref('daily_transport_inv_form')})]"/>-->
+        <!--</record>-->
 
         <record id="daily_transport_form" model="ir.ui.view">
             <field name="name">Daily Transport</field>
@@ -50,9 +50,9 @@
             <field name="arch" type="xml">
                 <form string="Daily Transport">
                     <header>
-                        <button name="%(daily_invoic_action)d" string="Create Invoice"
-                                type="action" class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                        <!--<button name="%(daily_invoic_action)d" string="Create Invoice"-->
+                                <!--type="action" class="btn-primary"-->
+                                <!--attrs="{'invisible': [('state', '!=', 'done')]}"/>-->
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
